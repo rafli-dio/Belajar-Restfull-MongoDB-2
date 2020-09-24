@@ -10,7 +10,7 @@ app.use(express.json());
 app.use("/api/v2/book", bookRoute);
 // akhir midlewar
 mongoose
-  .connect(process.env.db, {
+  .connect(process.env.DB, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false,
@@ -18,6 +18,6 @@ mongoose
   .then(() => {
     console.log("succes");
   });
-app.listen(process.env.port, (err) => {
+app.listen(process.env.PORT, (err) => {
   console.log(`connected ${process.env.port}`);
 });
